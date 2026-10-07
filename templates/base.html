@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Atividade 3 - Flask EC2{% endblock %}</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f9; }
+        header { background: #333; color: #fff; padding: 20px; text-align: center; }
+        nav { background: #444; padding: 10px; text-align: center; }
+        nav a { color: #fff; margin: 0 15px; text-decoration: none; font-weight: bold; }
+        main { padding: 30px; background: #fff; min-height: 200px; margin: 20px auto; max-width: 800px; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        footer { background: #333; color: #fff; padding: 15px; text-align: center; margin-top: 40px; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Painel do Servidor Web Flask</h1>
+    </header>
+    <nav>
+        <a href="/">Início</a> | 
+        <a href="#">Sobre</a> | 
+        <a href="#">Contato</a>
+    </nav>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        <p>Desenvolvido por: <strong>Daniel Oliveira</strong> - Atividade 3 Flask AWS EC2</p>
+    </footer>
+</body>
+</html>
