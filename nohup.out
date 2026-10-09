@@ -1,0 +1,306 @@
+ * Serving Flask app 'app'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.30.147:5000
+[33mPress CTRL+C to quit[0m
+[2026-10-05 18:30:08,708] ERROR in app: Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/ubuntu/meu_projeto/venv/lib/python3.14/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/meu_projeto/venv/lib/python3.14/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/meu_projeto/venv/lib/python3.14/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/meu_projeto/venv/lib/python3.14/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/ubuntu/meu_projeto/app.py", line 7, in index
+    return render_template('index.html')
+  File "/home/ubuntu/meu_projeto/venv/lib/python3.14/site-packages/flask/templating.py", line 151, in render_template
+    return _render(app, template, context)
+  File "/home/ubuntu/meu_projeto/venv/lib/python3.14/site-packages/flask/templating.py", line 132, in _render
+    rv = template.render(context)
+  File "/home/ubuntu/meu_projeto/venv/lib/python3.14/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/ubuntu/meu_projeto/venv/lib/python3.14/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/ubuntu/meu_projeto/templates/index.html", line 1, in top-level template code
+    {% extends 'base.html' %}
+  File "/home/ubuntu/meu_projeto/venv/lib/python3.14/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/ubuntu/meu_projeto/templates/base.html", line 32, in template
+    <title>{% block title %}Atividade 3 - Flask EC2{% endblock %}</title>
+    ^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.TemplateAssertionError: block 'title' defined twice
+179.87.148.89 - - [05/Oct/2026 18:30:08] "[35m[1mGET / HTTP/1.1[0m" 500 -
+179.87.148.89 - - [05/Oct/2026 18:30:09] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2026-10-05 18:30:21,371] ERROR in app: Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/ubuntu/meu_projeto/venv/lib/python3.14/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/meu_projeto/venv/lib/python3.14/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/meu_projeto/venv/lib/python3.14/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/meu_projeto/venv/lib/python3.14/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/ubuntu/meu_projeto/app.py", line 7, in index
+    return render_template('index.html')
+  File "/home/ubuntu/meu_projeto/venv/lib/python3.14/site-packages/flask/templating.py", line 151, in render_template
+    return _render(app, template, context)
+  File "/home/ubuntu/meu_projeto/venv/lib/python3.14/site-packages/flask/templating.py", line 132, in _render
+    rv = template.render(context)
+  File "/home/ubuntu/meu_projeto/venv/lib/python3.14/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/ubuntu/meu_projeto/venv/lib/python3.14/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/ubuntu/meu_projeto/templates/index.html", line 1, in top-level template code
+    {% extends 'base.html' %}
+  File "/home/ubuntu/meu_projeto/venv/lib/python3.14/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/ubuntu/meu_projeto/templates/base.html", line 32, in template
+    <title>{% block title %}Atividade 3 - Flask EC2{% endblock %}</title>
+    ^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.TemplateAssertionError: block 'title' defined twice
+179.87.148.89 - - [05/Oct/2026 18:30:21] "[35m[1mGET / HTTP/1.1[0m" 500 -
+179.87.148.89 - - [05/Oct/2026 18:30:21] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+ * Serving Flask app 'app'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.30.147:5000
+[33mPress CTRL+C to quit[0m
+ * Serving Flask app 'app'
+ * Debug mode: off
+Address already in use
+Port 5000 is in use by another program. Either identify and stop that program, or start the server with a different port.
+179.87.148.89 - - [05/Oct/2026 18:38:45] "GET / HTTP/1.1" 200 -
+179.87.148.89 - - [05/Oct/2026 18:39:10] "GET / HTTP/1.1" 200 -
+179.87.148.89 - - [05/Oct/2026 18:39:19] "GET / HTTP/1.1" 200 -
+179.87.148.89 - - [05/Oct/2026 18:39:20] "GET / HTTP/1.1" 200 -
+ * Serving Flask app 'app'
+ * Debug mode: off
+Address already in use
+Port 5000 is in use by another program. Either identify and stop that program, or start the server with a different port.
+179.87.148.89 - - [05/Oct/2026 18:42:15] "GET / HTTP/1.1" 200 -
+179.87.148.89 - - [05/Oct/2026 18:42:26] "GET / HTTP/1.1" 200 -
+ * Serving Flask app 'app'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.30.147:5000
+[33mPress CTRL+C to quit[0m
+179.87.148.89 - - [05/Oct/2026 18:44:31] "GET / HTTP/1.1" 200 -
+ * Serving Flask app 'app'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.30.147:5000
+[33mPress CTRL+C to quit[0m
+179.87.148.89 - - [05/Oct/2026 18:45:57] "GET / HTTP/1.1" 200 -
+179.87.148.89 - - [05/Oct/2026 18:47:33] code 400, message Bad request version ('®?iw\x9b:\x95ñÚ\x82\x00')
+179.87.148.89 - - [05/Oct/2026 18:47:33] "[31m[1m\x16\x03\x01\x07f\x01\x00\x07b\x03\x03\x05è¼>»À±Þfó\x90å\x82³n\x84í¤ã\\H\x12ª\\\x9a¿\x0e99\x09å} ÷eÂ\x1en\x88F¡\x15%\x0bh\x9d¤ÿH\x1fø5HI\x0b®?iw\x9b:\x95ñÚ\x82\x00 [0m" 400 -
+179.87.148.89 - - [05/Oct/2026 18:47:33] code 400, message Bad request version ('\x08\x83\x9ad\x8c\x9b-\x01')
+179.87.148.89 - - [05/Oct/2026 18:47:33] "[31m[1m\x16\x03\x01\x07¦\x01\x00\x07¢\x03\x03~ø\x1c-·]ð>·\x9c8i"Ñí\x9bp\x8c&Azâ§\x99y²Ý¢\x02¡\x81\x9b \x17Oý\x02¦ªòý\x0cÌK+BIc\x82\x01s\x98ÏÃ\x8cºÈÜoL\x9d{\x18/×\x00 ÚÚ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x079ªª\x00\x00\x00\x0d\x00\x1a\x00\x18ºº\x09\x04\x09\x05\x09\x06\x04\x03\x08\x04\x04\x01\x05\x03\x08\x05\x05\x01\x08\x06\x06\x01DÍ\x00\x05\x00\x03\x02h2ÿ\x01\x00\x01\x00þ\x0d\x00ú\x00\x00\x01\x00\x01Ú\x00 ,Ï\x9dò\x9aL6+\x00mü'åPý\x9d¦1\x91Ob\x0d§- \x9cÁ­iEÀ\x0b\x00Ð¦\x09\x0d\x0b¹ª{ÑÁò\x9bxS\x9a½_Þ«þWX\\#f®\x14D\x95W®\x1d\x82_S\x9d\x17;T\x1cñIn\x8cJªg\x97<l}\x90\x87¸hH¬\x0eA/\x8f\x02\x0cu°(´}k\x04¢Øó¶.`ïv!\x9dSÈ¹W\x88ô\x12\x08ú`ªk¸\x86Ùsô5\x1cü=ÙÖw\x92¯æ \x01´²îe*¡¶8¡:\x81c\x09©\x88\x8fÉø\x8a\x84ìè\x8a\x90æÚ\x02\x00\x1cø0ÊÂòºn\x09ôB\x1cd³qW\x1b©èµ\x859\x98¢d/â\x93kÌñûQ\x8dè 4ä[j½\x9f£C\x01/v-\x15©Û\x81YT8Ç×\x92\x8bÆ-ÿûÆ91\x13ÄRkô¢\x00\x10\x00\x0e\x00\x0c\x02h2\x08http/1.1Ê4\x00º\x00¸\x05\x82ß\x13\x02\x01\x05\x82ß\x13\x02\x06\x05\x82ß\x13\x02\x0d\x05\x82ß\x13\x02\x0e\x05\x82ß\x13\x02\x0f\x05\x82ß\x13\x02\x12\x05\x82ß\x13\x02\x13\x05\x82ß\x13\x02\x14\x08\x83\x9ad\x8c\x9b-\x01\x07\x08\x83\x9ad\x8c\x9b-\x01\x08\x08\x83\x9ad\x8c\x9b-\x01\x09\x08\x83\x9ad\x8c\x9b-\x01[0m" 400 -
+179.87.148.89 - - [05/Oct/2026 18:47:33] code 400, message Bad request version ('\x08\x83\x9ad\x8c\x9b-\x01')
+179.87.148.89 - - [05/Oct/2026 18:47:33] "[31m[1m\x16\x03\x01\x07\x86\x01\x00\x07\x82\x03\x03¹\x08@¬\x96ò|\x13`ì\x92õ¯p\x12X\x07\x05zûæv³_Þ\x03\x92È²à4? ZÌW"Cø\x8c<¥%éÝ5`À\x1eà\x97\x01"÷4'o$\x0c\x94\x1eò\x9bkþ\x00 ÚÚ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x07\x19\x9a\x9a\x00\x00ÿ\x01\x00\x01\x00DÍ\x00\x05\x00\x03\x02h2\x00\x12\x00\x00þ\x0d\x00Ú\x00\x00\x01\x00\x01Ý\x00 Ò B\x1a\x9eX\x0d´\x17Ó\x8bÐhs\x98\x11pê«9Ü\x19\x12\x08\x8eB\x9a¸÷ÿç\x0d\x00°9Ã>6\x8e\x99\x09\x19\x9dM}\x83)\x86\x83*N\x8f##V\x97\x9eªFÚÉÜ¼S-wÑ\x0b?ëÏàl\x9eCº½â\x07Hq¿Á\x1câÑ£¿rXlÕJ(ãÚ\x8eOAË²¾3\x1dóÜ¤Þ\x80E#ÒaÉ\x11\x97JæÃ\x03\x8d\x9d\x95\x060\x08\x90\x1eéOiÈmú\x8b»Â*æ\x98$\x1cK\x005¡å\x90ùy\x95X¿êÐdåæ¬,!\x02ÒV;t¨x\x82ùþ\x80ié\x07æP \x922Ò\x12:å/á\x9dÊ\x1d¡\x06~=\x1fM¦L\x9bÁÎ¦e\x873\x1dÛ\x00 0ù\x00+\x00\x07\x06ªª\x03\x04\x03\x03\x00\x17\x00\x00\x00\x0b\x00\x02\x01\x00\x00\x05\x00\x05\x01\x00\x00\x00\x00\x00\x10\x00\x0e\x00\x0c\x02h2\x08http/1.1\x00#\x00\x00\x00\x0d\x00\x1a\x00\x18\x1a\x1a\x09\x04\x09\x05\x09\x06\x04\x03\x08\x04\x04\x01\x05\x03\x08\x05\x05\x01\x08\x06\x06\x01Ê4\x00º\x00¸\x05\x82ß\x13\x02\x01\x05\x82ß\x13\x02\x06\x05\x82ß\x13\x02\x0d\x05\x82ß\x13\x02\x0e\x05\x82ß\x13\x02\x0f\x05\x82ß\x13\x02\x12\x05\x82ß\x13\x02\x13\x05\x82ß\x13\x02\x14\x08\x83\x9ad\x8c\x9b-\x01\x07\x08\x83\x9ad\x8c\x9b-\x01\x08\x08\x83\x9ad\x8c\x9b-\x01\x09\x08\x83\x9ad\x8c\x9b-\x01[0m" 400 -
+179.87.148.89 - - [05/Oct/2026 18:47:34] code 400, message Bad request version ('få½\x87Ot¨~=\x83j÷«Áèbð\x11ô\x9fÿß\x95óYH±ûëJ²ï\x00')
+179.87.148.89 - - [05/Oct/2026 18:47:34] "[31m[1m\x16\x03\x01\x07Æ\x01\x00\x07Â\x03\x03\x940µð\x80½\x81\x85lH\x89F5ÍØÓK25)Eât\x87\x07\x12îka5ÿû få½\x87Ot¨~=\x83j÷«Áèbð\x11ô\x9fÿß\x95óYH±ûëJ²ï\x00 [0m" 400 -
+ * Serving Flask app 'app'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.30.147:5000
+[33mPress CTRL+C to quit[0m
+ * Serving Flask app 'app'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.30.147:5000
+[33mPress CTRL+C to quit[0m
+ * Serving Flask app 'app'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.30.147:5000
+[33mPress CTRL+C to quit[0m
+200.19.224.35 - - [06/Oct/2026 12:09:56] "GET / HTTP/1.1" 200 -
+200.19.224.35 - - [06/Oct/2026 12:09:56] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+ * Serving Flask app 'app'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.30.147:5000
+[33mPress CTRL+C to quit[0m
+200.19.224.35 - - [06/Oct/2026 12:12:14] "GET / HTTP/1.1" 200 -
+200.19.224.35 - - [06/Oct/2026 12:12:17] "GET / HTTP/1.1" 200 -
+200.19.224.35 - - [06/Oct/2026 12:12:21] "GET / HTTP/1.1" 200 -
+200.19.224.35 - - [06/Oct/2026 12:12:25] "GET / HTTP/1.1" 200 -
+200.19.224.35 - - [06/Oct/2026 12:14:01] "GET / HTTP/1.1" 200 -
+200.19.224.35 - - [06/Oct/2026 12:17:24] "GET / HTTP/1.1" 200 -
+ * Serving Flask app 'app'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.30.147:5000
+[33mPress CTRL+C to quit[0m
+ * Serving Flask app 'app'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.30.147:5000
+[33mPress CTRL+C to quit[0m
+200.19.224.35 - - [06/Oct/2026 13:20:11] code 400, message Bad request syntax ('\x16\x03\x01\x07\x08\x01\x00\x07\x04\x03\x03Iþö¶³ÙÃ-\x99S\x0eéW\x03û\x91b¬|')
+200.19.224.35 - - [06/Oct/2026 13:20:11] "[31m[1m\x16\x03\x01\x07\x08\x01\x00\x07\x04\x03\x03Iþö¶³ÙÃ-\x99S\x0eéW\x03û\x91b¬|[0m" 400 -
+200.19.224.35 - - [06/Oct/2026 13:20:11] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x07\x08\x01\x00\x07\x04\x03\x03\x06µ')
+200.19.224.35 - - [06/Oct/2026 13:20:11] "[31m[1m\x16\x03\x01\x07\x08\x01\x00\x07\x04\x03\x03\x06µ\x0d\x9a[0m" 400 -
+200.19.224.35 - - [06/Oct/2026 13:20:12] code 400, message Bad request syntax ('\x16\x03\x01\x06è\x01\x00\x06ä\x03\x03Û\x89[8\x10á')
+200.19.224.35 - - [06/Oct/2026 13:20:12] "[31m[1m\x16\x03\x01\x06è\x01\x00\x06ä\x03\x03Û\x89[8\x10á[0m" 400 -
+200.19.224.35 - - [06/Oct/2026 13:20:12] code 400, message Bad request version ('$\x04¹oDb\x10ÿ\x94ä\x9eW\x08\x1b')
+200.19.224.35 - - [06/Oct/2026 13:20:12] "[31m[1m\x16\x03\x01\x06È\x01\x00\x06Ä\x03\x033J\x11±÷Vp\x0boÀQÇAÍ2s´IntâIÕú»\x81 \x1a¡²êê $\x04¹oDb\x10ÿ\x94ä\x9eW\x08\x1b[0m" 400 -
+200.19.224.35 - - [06/Oct/2026 13:20:12] code 400, message Bad request version ('èÓÈ')
+200.19.224.35 - - [06/Oct/2026 13:20:12] "[31m[1m\x16\x03\x01\x06¨\x01\x00\x06¤\x03\x03øß\x9e¶^=²cI_\x14ONa6xcÁOº«\x9e½\x1f Ý§ªåê'ù @Ë\x00ª\x85èÓÈ[0m" 400 -
+200.19.224.35 - - [06/Oct/2026 13:20:12] code 400, message Bad request version ('**\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06;JJ\x00\x00DÍ\x00\x05\x00\x03\x02h2\x00\x12\x00\x00\x00')
+200.19.224.35 - - [06/Oct/2026 13:20:12] "[31m[1m\x16\x03\x01\x06¨\x01\x00\x06¤\x03\x03ú\x83r\x17zw\x89÷\x07uO\x9dlüÝ\\R"\x80ýOO¥»T\x12åã^ÄQú ¿\x9b'4vá:'\x12ñý{øÍ\x9d\x1c\x07>\x96gv0T\x8c® ï!Ìäd.\x00 **\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06;JJ\x00\x00DÍ\x00\x05\x00\x03\x02h2\x00\x12\x00\x00\x00[0m" 400 -
+200.19.224.35 - - [06/Oct/2026 13:20:14] code 400, message Bad request version ('°»ò\x00\x17\x00\x00\x00')
+200.19.224.35 - - [06/Oct/2026 13:20:14] "[31m[1m\x16\x03\x01\x06¨\x01\x00\x06¤\x03\x03¹,ªØ<¤\x99e\x8a$\x19\x7fHWc\x96¬3ÐWXÆ¤ûÞþd\x1aZý Ð °#üfÞ¼=\x06F.\x8e\x994¯\x81­\x1e`K\x89ÝÖO\x882\x156ë\x16ÖOu\x00 ZZ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06;ÚÚ\x00\x00\x00\x12\x00\x00þ\x0d\x00º\x00\x00\x01\x00\x01H\x00 \x85bu²+JQm¦\x94Îà¦]\x81\x82\x0eEÇÌtÜíè\x99(º°\x1akáu\x00\x90Bå\x01\x13\x18\x9cU\x1d!-·OGSqfö\x87ó;'\x03\\|Z²ÎÄ¸B³}'£+´$cg\x9b\x1bi\x15ÑAÍ\x7fZw!¸òlþ7@\x05ÑìæYv\x170-Àà\x9fþ\x032\x8ewÍ\x1bN\\,\x93Ê\x0fSRü"åþ\x8eí\x91m \x95\x0e\x82=\x00@\x09Ù9ãBÛ¢\x0cÉ9z­$¾\x1ep\x88U3ã\x1fÿ\x07Í´è\x7f\x7f\x0cù\x8fcË^Q²Î\x92ïï¹\x19\x1d°»ò\x00\x17\x00\x00\x00[0m" 400 -
+200.19.224.35 - - [06/Oct/2026 13:20:14] code 400, message Bad request version ("bs'u\x0e\x14*\x135")
+200.19.224.35 - - [06/Oct/2026 13:20:14] "[31m[1m\x16\x03\x01\x06è\x01\x00\x06ä\x03\x03#\x8a\x97è\x06\x10\x04©Ñ)\x9eÒºz\x92ÆÝ\x95\x8b1_\x1fRR\x81\x1f8ò)o\x0fÐ '¤!\x8fk?×#®ÉÒÿÐàè\x87-£{KØÚ¯Á ÎÌ£¢a¸\x04\x00 \x1a\x1a\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06{êê\x00\x00ÿ\x01\x00\x01\x00\x00\x12\x00\x00\x00+\x00\x07\x06JJ\x03\x04\x03\x03DÍ\x00\x05\x00\x03\x02h2\x00\x1b\x00\x03\x02\x00\x02\x00\x05\x00\x05\x01\x00\x00\x00\x00\x003\x04ï\x04íêê\x00\x01\x00\x11ì\x04À\x9b\x00\x0fv\x99\x84ú@\x97Q\x86\x17> ¥'Ñ\x1a±\x9a\x84¯\x0b\x88¥\x85,ó×r\x8faq\x92£O9p$P¼\x89\x89ô£àº+Á5Pçü\x92\x09\x01Èz\x8a.4\x05\x19"¤g\x95ù}\x99| \x1fÅ!\x8b|\x10­\x93l\x89fH³D¾V¨¾û»\x9dªÃh ÉhIö9\x98ø\x95\x18¶~^\x83À¯ó\x0b6¨\x1cÌq2\x0dbs'u\x0e\x14*\x135[0m" 400 -
+200.19.224.35 - - [06/Oct/2026 13:20:14] code 400, message Bad request version ('**\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06{jj\x00\x00\x00#\x00\x00ÿ\x01\x00\x01\x00\x00')
+200.19.224.35 - - [06/Oct/2026 13:20:14] "[31m[1m\x16\x03\x01\x06è\x01\x00\x06ä\x03\x03Q©\x84L\x0c\x16\x08Â\x92JÙÑ\x05"av ÀóXù\x99\x8c\x96ë+GÚ\x8b2¾A ¿o\x05Òä\x06\x82·ç¨[\x1eUµ Û\x90ó=\x04b±\x9a\x1f½\x9c\x9a \\DÏ\x84\x00 **\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06{jj\x00\x00\x00#\x00\x00ÿ\x01\x00\x01\x00\x00[0m" 400 -
+200.19.224.35 - - [06/Oct/2026 13:20:14] code 400, message Bad request version ('\x06\x04\x03\x08\x04\x04\x01\x05\x03\x08\x05\x05\x01\x08\x06\x06\x01DÍ\x00\x05\x00\x03\x02h2\x00+\x00\x07\x06zz\x03\x04\x03\x03\x00\x12\x00\x00\x00#\x00\x00\x00-\x00\x02\x01\x01\x00')
+200.19.224.35 - - [06/Oct/2026 13:20:14] "[31m[1m\x16\x03\x01\x06¨\x01\x00\x06¤\x03\x03VèÿCx9\x85ØB\x10"Iã¤ÝF"[^\x87\x99ÝNÀ·Ä+c<»\x0fõ ÒÈ;À\x88\x02æ\x80\x1c\x95ðY\x1cÿ²\x88X­4±)»\x10D\x9d\x80\x0f¹\x03ëao\x00 ªª\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06;**\x00\x00\x00\x0b\x00\x02\x01\x00\x00\x0d\x00\x1a\x00\x18jj\x09\x04\x09\x05\x09\x06\x04\x03\x08\x04\x04\x01\x05\x03\x08\x05\x05\x01\x08\x06\x06\x01DÍ\x00\x05\x00\x03\x02h2\x00+\x00\x07\x06zz\x03\x04\x03\x03\x00\x12\x00\x00\x00#\x00\x00\x00-\x00\x02\x01\x01\x00[0m" 400 -
+200.19.224.35 - - [06/Oct/2026 13:20:16] code 400, message Bad request version ('¨ÃÈù®3ÙÎ')
+200.19.224.35 - - [06/Oct/2026 13:20:16] "[31m[1m\x16\x03\x01\x06¨\x01\x00\x06¤\x03\x03\x18\x1a5È\x83[\x1fnÉ\x14\x97¦Æ8ÃY7I\x170fm8?Ó\x8cf\x9e\x04-Wä \x8a,du\x09¨ÃÈù®3ÙÎ[0m" 400 -
+200.19.224.35 - - [06/Oct/2026 13:20:16] code 400, message Bad request version ("\x10Ê¡\x88\x92ÊC\x8fºp\x94ÏE\x13\x8bL\x91r'\x06HÆG\x94\x03\x82ê\x18\x84Ð\x16\x12VÌYm\x84;")
+200.19.224.35 - - [06/Oct/2026 13:20:16] "[31m[1m\x16\x03\x01\x06È\x01\x00\x06Ä\x03\x03Þ¬\x05%\x8c\x8a¼)\x0bÎ\x0fi\x18\x0eh'Ï³\x95\x08\x93ËrlüûéüL¢\x87^ ÊkÎïoÃé\x8d1Mí\x87Ñó³ýü+\x05µYv³àõ@\x939\x90\x95Û\x8d\x00 ÚÚ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06[::\x00\x00\x00-\x00\x02\x01\x01\x00\x05\x00\x05\x01\x00\x00\x00\x00\x00#\x00\x00\x003\x04ï\x04íÚÚ\x00\x01\x00\x11ì\x04À8\x1c!\x8bË\x02\x98$."é\x1f\x15°¼þq[I©\x94"£\x12C,VÉë\x0b\x9a*Çe*Â\x9bÒ»Pl\x01\x92Ùdi¢\x92\x83@\x9dÜê|\x18Ú\x12ÖG\x11Ç\x0c2ã¦__èQ÷Ä\x08Ä÷5\x87\x0cÅK\x04\x8fØº\x92\x04\\u\x11\x08.AhR\x1a&\x97\x7fG\x8a\x14çÌë@\x1e\x84«F<\x90T.v\x880\x84¿\x9e\x03\x96&k\x96\x86Ù\x9f=\\}·×7\x03W\x14ÈÔwæ7+à\x03/ÐukOÄº\x88\x04\x004c\x0fÿZ#\x10Ä\x19îÊ?àÚO¯ÅI¯¤\x91!û(æ9¼sFGqB+×:5z\x82Ã¤zb1,{\x8b\x05A¡àÂ×¤)\x15\x16|\x9c\x9c¹\x16Ã\x8f¤:\x0e+Ë7ÏÒ±å\x1a\x03\x94\x03\x0exÙ\x83RqÊªå2ê°da¬N/Ú@\x9få¬_q\x09c\x17\x03b"\\G¸X\x00\x05\x8cöåÃ\x17\x17[Ñ\x93pP¤+\x12\x99CyóÈ\x82wfÖëN'\x87»*\x08uFÙÇôâf\x9f\x02\x88b,'D\x05n\x06$\x8cÄÙCáÇ\x09¦\x92{Ëø\x09\x1f\x9cmqy|ð\x9aÀ¹Ò#D)\x1e\x00\x11,Áw£¹ÁÁÎ\x86|£Ü l¥Ã\x11 »ÿ\x83\x82\x02´~\x12sÍ\x0f¤\x924\x01·U\x18ÀgùÀRü\x0d+Û]\x89ú":ûO\x7f\x93¨Ó2¤-"ið\x14\x9bv\x11D³TÉ\x9b1xDà\x08äÉ\x8d%C\x19\x0dósÿtEíÛx\x8as$Ï\x9c<ÿ"|ä\x11\x86çU6Û\x02§4\x17`¤\x04·:hXæ\x89²´égµ¼\x80\x88±\x0fÆ\x1ai\x8fõ\x03Ø\x998~Ö\x9b~×ÈÛk5Z\x96\x97©Z5ÍÒ¬å¹Ifd¥äVS\x97Ì¹ø\x17\x96\x09\x04\x83óÕ4+\x88,M\x1b\x83áXJ\x85\x10º^\x9ai*t¨g*<ñH\x1f\x06ø7\x91RH¡;\x07þ\x98\x02çÁ\x87\x90F{iR\x80,\x1cÄ°\x9aÈ¦Jº:¨xhb´\x9d+\x8aÏh\x1c~\x01)Ä\x02\x87!\x00\x13:³\x0c¯ô\x16ÊªÍ$,`À\x93\x12FÒE¯\x171Ê Åæ±\x8aÑ²lQÂ¨¨L!9x|\x98`\x82\x9cìËÀÑ¹MW\x1d×\x99\x1d\x00áË\x12Ð°æ²¸g\x13\x0e\x0f<\x90\x95£\x08©<qW\x04!\x01\x81*&H¼ \x84aO\x03(¾¨Ç§å»8\x19\x19\x94Ð\x07\x9f¤_öUhÞg¸¦\x0230¦gs¥À\x8c\x93\x10"Ç,J\x0cÐÎÕ.w\x93\x1d<Ðw¬ ¨ï\x89\x00Ø\x80tÇ{\x1e\x88ñWEÚ*\x87Ê\x83½FA\x05ë7¨Û{ä34`J\x88ï¤ARjÄ{#Pý:±\\\x86\x1ef`¨²I4Fá{>ùi\x83ú\x88Éqh\x1e\x0b©a\x97\x81äø9ûÜQoÂJn\x97²\x85DÊ2\x98=\x03u¿\x9d\x84·\x1f\x10Ê¡\x88\x92ÊC\x8fºp\x94ÏE\x13\x8bL\x91r'\x06HÆG\x94\x03\x82ê\x18\x84Ð\x16\x12VÌYm\x84;[0m" 400 -
+200.19.224.35 - - [06/Oct/2026 13:20:16] code 400, message Bad request version ('ìç\x87\x8bEºJ\x1a\x11·iáõ')
+200.19.224.35 - - [06/Oct/2026 13:20:16] "[31m[1m\x16\x03\x01\x07\x08\x01\x00\x07\x04\x03\x03\x8f¹\x91w\x82Úµ\x1cwÁÁ\x8eöÎkt\x81ÈøN'\x81ÊE\x03\x9aÜ%¢\x09>\x99 ìç\x87\x8bEºJ\x1a\x11·iáõ\x85[0m" 400 -
+200.19.224.35 - - [06/Oct/2026 13:20:16] code 400, message Bad request version ('ç<t\x8e\x19§\x98{ñ`/å¿cÏ*ò\x11ß\x16TläxÈ»Ó?cµ!ÀÙ/h\x7f\xad\x89\x98^ÍÛÿ¶')
+200.19.224.35 - - [06/Oct/2026 13:20:16] "[31m[1m\x16\x03\x01\x06È\x01\x00\x06Ä\x03\x03Ø,\x19³Îç\x96\x86X±ö7\x16%dûîô!Þ\x16V\x03V·_.êí¹\x90Ð î\x9eèg¯ÉxEjÕ\x05¯\x89-\x15\x19Ö4¹1J0¥\x8aE6#ÁùK\x82¶\x00 \x9a\x9a\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06[\x1a\x1a\x00\x00\x00\x1b\x00\x03\x02\x00\x02\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00\x0b\x00\x02\x01\x00\x00\x10\x00\x0e\x00\x0c\x02h2\x08http/1.1þ\x0d\x00Ú\x00\x00\x01\x00\x01\x99\x00 \x12\x01IbÚÉ/¨û\x0fª\x1e·\x83\x0eG]7}5\x07÷\x1b í\x88\x19\x8c\x06j\x98\x1c\x00°ë\x8cµ\x08ÞLulÃìÙ7>wW\x14a×\x0eZ\x0d\x14¹Î\x82\x02#\x02\x8bµãT\x96´\\é»\x98æIÈ¡¹§4f´_\x1c\x97©\x14¥`\x09\x99\x95,\x92N\x09!m¸ÈÐë\x06W\x8b:\x05æ5¹Â7÷\x11\x09õâð4­W\x18T¨¾\x99\x1eç<t\x8e\x19§\x98{ñ`/å¿cÏ*ò\x11ß\x16TläxÈ»Ó?cµ!ÀÙ/h\x7f­\x89\x98^ÍÛÿ¶[0m" 400 -
+200.19.224.35 - - [06/Oct/2026 13:20:32] code 400, message Bad request version ('Mo³Ñ')
+200.19.224.35 - - [06/Oct/2026 13:20:32] "[31m[1m\x16\x03\x01\x06¨\x01\x00\x06¤\x03\x03GOç\x1eV\x1a\x04(\x0b\x13~_Eß\x8b\x19P\x0dièÙ\x08É\x9cS8@\x80aÜ¼è ÉÌ\\Ã@ëJtI\\\x1a·h\x97\x10¶ö\x89LmÊqw@\x81ªÙnËCRþ\x00 \x8a\x8a\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06;jj\x00\x00þ\x0d\x00º\x00\x00\x01\x00\x01\x0d\x00 J\x7fF÷±Q*8\x1a\x9dÏ\x9bc\x14\x174L\x9c\x19¸\x80\x04çÐ\x1f÷JÛýég'\x00\x90&#ùxb\x04íZ&Ö³\x08\x9e\x85\x07Õâ\x81?\x12\x11\x86·<³\x1a\x89Ñ9«1g\x1ejLè?<\x00CÆ^å,¼\x84ìvK[ªeïÖ`¯1¼Æ¹ì<Ù¨\x08\x7fø¡\x15Ô \x01ÔØ\x91öâ#+²_\x00ËY\x11\x8d96Aìç¡ÿÁb/\x10Ô\x08w\x0c\x8f\x08Ýwµ\x96\x11-Sw\x15\x09Mo³Ñ[0m" 400 -
+200.19.224.35 - - [06/Oct/2026 13:20:32] code 400, message Bad request version ('ÚÚ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06;úú\x00\x00ÿ\x01\x00\x01\x00\x00\x1b\x00\x03\x02\x00\x02\x00\x17\x00\x00\x00')
+200.19.224.35 - - [06/Oct/2026 13:20:32] "[31m[1m\x16\x03\x01\x06¨\x01\x00\x06¤\x03\x03¤ü×\x12­øt$\x0fì<¡!.07¼\x040?`Á\x9d*Ñsó¼,L8w c\x9a½ë<@ø\x1f\x03\x12\x9c:\x81\x1c\x18\x9c$Ó\x9bì\x88Á\x93?µY\x8f«\x058Ô\x1b\x00 ÚÚ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06;úú\x00\x00ÿ\x01\x00\x01\x00\x00\x1b\x00\x03\x02\x00\x02\x00\x17\x00\x00\x00[0m" 400 -
+200.19.224.35 - - [06/Oct/2026 13:20:32] code 400, message Bad request syntax ('\x16\x03\x01\x06¨\x01\x00\x06¤\x03\x03\xad\x00yw«\x18\x17\x00Æ')
+200.19.224.35 - - [06/Oct/2026 13:20:32] "[31m[1m\x16\x03\x01\x06¨\x01\x00\x06¤\x03\x03­\x00yw«\x18\x17\x00Æ[0m" 400 -
+200.19.224.35 - - [06/Oct/2026 13:20:33] code 400, message Bad request version ('ZZ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06\x9b::\x00\x00\x00+\x00\x07\x06**\x03\x04\x03\x03\x00-\x00\x02\x01\x01\x00')
+200.19.224.35 - - [06/Oct/2026 13:20:33] "[31m[1m\x16\x03\x01\x07\x08\x01\x00\x07\x04\x03\x03\x8d}p\x97këæÝ³rý\x9cì\x1b\x9e\x0f¤æ`Å»µ\x98¦\x8d\x01tÂ¦®lÚ \x1e\x95­Ã\x06Y\x92<Üôà¹pÃ\x17\x90^9âÙ\x87\x16{*{\x8aª¶|T\x90\x98\x00 ZZ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06\x9b::\x00\x00\x00+\x00\x07\x06**\x03\x04\x03\x03\x00-\x00\x02\x01\x01\x00[0m" 400 -
+200.19.224.35 - - [06/Oct/2026 13:20:33] code 400, message Bad request version ('å,eE§\x8cC&¸Ê\x166\x11÷¥!Èæ_Óg\x83\\Iq=\x15)ã\x86\x8eêñ4ÝÌ\x8b(5\x12\x8c\x9d\x9b\x82óóuê®½«á½ú\x97%\x10KüTÀ{:ìÏ¥\x83\x14~oNÓÍèh\x99\x83÷\x7fÕrº\x05[e\xad')
+200.19.224.35 - - [06/Oct/2026 13:20:33] "[31m[1m\x16\x03\x01\x06¨\x01\x00\x06¤\x03\x03ÒK\x999¥÷ÀÿxFu`å\x0e\x86\x17^-©À%Y`^ô.$[\x84\x136x ºî\x98v\x19ãVN@@bg\x98\x95ÑRoÒêä©6æ\\\x1a¤\x05+r\x9b(À\x00 úú\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06;zz\x00\x00\x00+\x00\x07\x06ÚÚ\x03\x04\x03\x03\x00#\x00\x00þ\x0d\x00º\x00\x00\x01\x00\x01\x1b\x00 6Ç\x02\x09NµÐ§¥woåZ\x08­¿fd\x11\x86ïV¬Æ\x8f§ßÖHÍ·W\x00\x90\x1då,eE§\x8cC&¸Ê\x166\x11÷¥!Èæ_Óg\x83\\Iq=\x15)ã\x86\x8eêñ4ÝÌ\x8b(5\x12\x8c\x9d\x9b\x82óóuê®½«á½ú\x97%\x10KüTÀ{:ìÏ¥\x83\x14~oNÓÍèh\x99\x83÷\x7fÕrº\x05[e­[0m" 400 -
+200.19.224.35 - - [06/Oct/2026 13:20:33] code 400, message Bad request version ('\x80\x12\x9a\x86\x95J¾¢l\x91\\\x18_Í')
+200.19.224.35 - - [06/Oct/2026 13:20:33] "[31m[1m\x16\x03\x01\x06È\x01\x00\x06Ä\x03\x03t4\x82\x1eÆúã\x1b%\x920º¿~°¡x#\x11ù´\x8eåÈ¹)\x9fr7\x03\x13\x06 \x1b¼Ñá\x88$\x13&]]¡à¸á o:Ì5Ñ®ûc*]ì.¾\x8aÑ\x1bn\x00 \x8a\x8a\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06[JJ\x00\x00DÍ\x00\x05\x00\x03\x02h2\x00\x1b\x00\x03\x02\x00\x02\x00-\x00\x02\x01\x01\x003\x04ï\x04íjj\x00\x01\x00\x11ì\x04À¦Æ\x7f`g \x9fB°bõÌ\x8b¹LÃ\x14qÅ¤ªuâ1Ï(ºú\x8a\x95\x1d÷\x95\x09&XÞ\x1a®ôà\x0f0B|\x10ö\x85Ðg\x07³Ù\x12\x80,#;9\x7f´ÔÅ\x13\x90\x96=\x15u¼ò»ÂÀA}\x09±V2m_t¶¼\x0c,\x1dS±©©*îjÇ%2brAi>\x91rô"lØ©&ÁkhýuoIÖ\x98C¡%¾:Á²4\x80C¦¯ÕÐ(ñ\x88\x88Ú\x8cÇ&&3 \x8b\x98\x02Ü4\x8cGÏPZ¡Ùs1^¢\x8e-@P\x86\x9aU\x12Ø\x90pw\x9f³\x87\x05qB¢V7D\x85\x8b{Ù\x87Q/*CU\x06\x9d?ùÌWöY¿\x0b\x80\x12\x9a\x86\x95J¾¢l\x91\\\x18_Í[0m" 400 -
+ * Serving Flask app 'app'
+ * Debug mode: off
+Address already in use
+Port 5000 is in use by another program. Either identify and stop that program, or start the server with a different port.
+200.19.224.35 - - [06/Oct/2026 13:20:38] code 400, message Bad request version ('\x9a45sÂéÔª\x13qT·]$xQÄ\x82\x11\x16\x11\x7f¹\x9cÇ\x11m£>Á\x03\x9a+z¢')
+200.19.224.35 - - [06/Oct/2026 13:20:38] "[31m[1m\x16\x03\x01\x06è\x01\x00\x06ä\x03\x03ZcâÉYE\x8bkC÷S*[´\x84\x98\x15G4\x11¤hã®\x1eY\x91èH\x0d`\x13 o÷¼\x18Í\x0f·\x0b\x9f%àâ¸Ê±[\x8c}8¤Ö¶\x8cÖoeÀÅ«\x07OÍ\x00 JJ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06{ÊÊ\x00\x00\x00\x0d\x00\x1a\x00\x18**\x09\x04\x09\x05\x09\x06\x04\x03\x08\x04\x04\x01\x05\x03\x08\x05\x05\x01\x08\x06\x06\x01\x00\x1b\x00\x03\x02\x00\x02DÍ\x00\x05\x00\x03\x02h2\x00\x10\x00\x0e\x00\x0c\x02h2\x08http/1.1\x00#\x00\x00\x00+\x00\x07\x06jj\x03\x04\x03\x03þ\x0d\x00ú\x00\x00\x01\x00\x01æ\x00 6ô­ÞË\x8d7º~r¶=Ê<Dyw\x8fß\x97Ïý"\x06%#g.ë\x92)6\x00Ð²\x80óÿ\x9bCÎpªÀª/\x0fLm¢µ/\x09púqø\x95_ö8\x86\x8bwä)\x02"\x1cM¨µÉTí\x9f¬\x1f6¢áfÍ8ü\x1e\x9a45sÂéÔª\x13qT·]$xQÄ\x82\x11\x16\x11\x7f¹\x9cÇ\x11m£>Á\x03\x9a+z¢ [0m" 400 -
+200.19.224.35 - - [06/Oct/2026 13:20:38] code 400, message Bad request version ('Ì\x00Ö')
+200.19.224.35 - - [06/Oct/2026 13:20:38] "[31m[1m\x16\x03\x01\x06è\x01\x00\x06ä\x03\x03ö\x98¯û\x1e\x7fh\x96eLáï\x0crÉýç/îÂEF¬ Ñõï\x8a<\x16\x07, \x82\x98ÍÌ\x0dù1çZ&\x9aT#õã=/x4AØk\x91Å\x82úe\x81Þ¯*\x9d\x00 ÊÊ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06{\x8a\x8a\x00\x00\x00\x12\x00\x00\x00#\x00\x00ÿ\x01\x00\x01\x00\x00\x0d\x00\x1a\x00\x18êê\x09\x04\x09\x05\x09\x06\x04\x03\x08\x04\x04\x01\x05\x03\x08\x05\x05\x01\x08\x06\x06\x01\x00\x0b\x00\x02\x01\x00\x00+\x00\x07\x06\x9a\x9a\x03\x04\x03\x03\x003\x04ï\x04íjj\x00\x01\x00\x11ì\x04À:×\x02\x86$²¡K ú\x93Q´Q\x11M\x91\x8fÆÛm_Y|w\x80¨£R\x0e\x00;=óÂxì#x\x9aõOËÙÁ~àMÐ\x8b¾¨º78\x80KA¨\x05¿\x954ÜV¯$Èx;ÐCÜi\x00¶3\x07|Û\x1c(\x1b\x86\x02\x15Îñà\x10%B±Çv´\x94û\x8a{4§þ\x9aÁg\x14|\x07k<°9\x8a-ËxOØÆ@\x86³êÙ\x83Ç±\x15\x95\x15d²»_Y\x83»ieD4D\x1f\x9f©¥\x1a\x01\x86Ä#¸\x14\x89`f·\x97m`\x02ê\x96·"$\x0bd\x1cd\x1f×=g\x18ÀB\x19\x9e0¡\x12R\x9b^-Ä\x93)\x16`0\x84\x15QDz\x1fädÁ´\x8a^Æb-HÏ\x04ö[1E: \x95\x81zcFPÜ\x8b\x0e\x03Ä(«Rd¥B=á\x7fP\x04{ï¡É-T=ó¼"\x1f\x00¯0\x97pr o\x87\x86#¾;\x04\x1a\x944íÚ´iØ\x03\x00Dxû0º>5Ì÷U\x81\x06d\x9bo\x02±½á­\x96ËsÌ'|\x9f6-·Ð\x10Ã¡\x04HÀ0ÿ\x04¢²\x13§\x03D\x12\x1e\x1bZ$\x96\x9dÊñ2~b\x8dÍ§Hí¨>nG}j\x84#\x90© ¡\x80Æ\x90¨¢;\x14W«¨]ÈÔ±\x11Áq¶«Uí\x97Ìí"g½9\x9e\x09ù\x10\x0d(C\x90»È\x8e791 Ì\x00Ö[0m" 400 -
+200.19.224.35 - - [06/Oct/2026 13:20:38] code 400, message Bad request version ('K³f¶6Ù0\x9f¤µæ¼\x04Q,')
+200.19.224.35 - - [06/Oct/2026 13:20:38] "[31m[1m\x16\x03\x01\x06è\x01\x00\x06ä\x03\x03þ\x10Ç\x85)=­\x96\x94kfA­\x0e´NW£Q¦äÐæJVO\x85\x84:`\x84\x95 AG\x0cK³f¶6Ù0\x9f¤µæ¼\x04Q,[0m" 400 -
+200.19.224.35 - - [06/Oct/2026 13:20:38] code 400, message Bad request syntax ('\x16\x03\x01\x07\x08\x01\x00\x07\x04\x03\x03\x18')
+200.19.224.35 - - [06/Oct/2026 13:20:38] "[31m[1m\x16\x03\x01\x07\x08\x01\x00\x07\x04\x03\x03\x18[0m" 400 -
+ * Serving Flask app 'app'
+ * Debug mode: off
+Address already in use
+Port 5000 is in use by another program. Either identify and stop that program, or start the server with a different port.
+200.19.224.35 - - [06/Oct/2026 13:21:05] code 400, message Bad request version ('\x02h2\x08http/1.1ÿ\x01\x00\x01\x00\x00\x05\x00\x05\x01\x00\x00\x00\x00\x003\x04ï\x04í')
+200.19.224.35 - - [06/Oct/2026 13:21:05] "[31m[1m\x16\x03\x01\x06è\x01\x00\x06ä\x03\x03^ñÈ\x08¤\x1a\x1cæ²"\x8aÿ\x00¥\x7fiË\x84Ã<6Xa½\x85ó]ë\x17«ñe ×ÅP+\x05ë ÎÚ\x88\x8a\x07Ñ\x943y\x19\x0cÀ\x1by\x1b\x86\x8bÀtjã%\x95L\x10\x00 ºº\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06{JJ\x00\x00\x00\x10\x00\x0e\x00\x0c\x02h2\x08http/1.1ÿ\x01\x00\x01\x00\x00\x05\x00\x05\x01\x00\x00\x00\x00\x003\x04ï\x04í[0m" 400 -
+200.19.224.35 - - [06/Oct/2026 13:21:05] code 400, message Bad request version ('\x12\x00È\x8e\x15Á7²ÇnæÁ\x9b')
+200.19.224.35 - - [06/Oct/2026 13:21:05] "[31m[1m\x16\x03\x01\x06¨\x01\x00\x06¤\x03\x03â?)¿eL\x06Þ1dX;å\x0cB°O¶\x98C\x83ñxð\x9bÅp+'¹`É Vö 3\x12Ñ%õIGù\x0bÈPÎ\x83Õ\x07\x91Ïp«¾¤Òþê\x81Ø@×\x04\x00 ÊÊ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06;êê\x00\x00\x003\x04ï\x04íúú\x00\x01\x00\x11ì\x04À\x17ø\x175\x19©\x7f¬´\x8d¸wbõ©L\x0c¶² Yjá æ3¯á\x89_)À²\x9cp)û'·Ôé\x08ÿ\x84Oïax\x16h¬\x03\x85»vê\x0e\x17 ³dÄ;ËÁ¡\x9b\x83,:¹\x84ó!O^Ò{\x99üW8a,)x¿Ü7.ç¨U\x97RÏ|\x88\x80ÈàGÌ§\x04¹4\x04\x11Õ£\x9b`|\x0f57\x8e\x13°Âe\x1e®\x1c_A\x1ao7Ú7U¹\x80.0^\x05Ô&þ\x05(u\x95\x88© \x12\x00È\x8e\x15Á7²ÇnæÁ\x9b[0m" 400 -
+200.19.224.35 - - [06/Oct/2026 13:21:05] code 400, message Bad request version ('°ÉãÍT¡\x00\\¹½l+\x17\x9d\x91¥\x88DklQ')
+200.19.224.35 - - [06/Oct/2026 13:21:05] "[31m[1m\x16\x03\x01\x06¨\x01\x00\x06¤\x03\x03Y:ñQÙ?|ïR\x9cf\x8b\x03ÿ\x89ktA\x98(¼ùGÑNÂ 9eu à ÒÒh­i±\x8dËó\x92"¤PÜÚû\x9d¡\x03Ò\x08>ð6ð\x98ü\x16DmnØ\x00 ºº\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06;zz\x00\x00þ\x0d\x00º\x00\x00\x01\x00\x01\x90\x00 \x92\x07Ç¹Ð\x0fÑ"\x96\x94lù\x85,"ãþú\x91F¼=\x00Kb\x1a\x16°\x18Ýym\x00\x90\x1d\x11}w\x18~°\x00þ\x9d6\x1e3áf\x15î8\x99âZ[vé) \x7f_\x0c\x9a¯26Ò<.&\x9a3mù<íÁdX\x93\x87G·´>\x88ÕTù÷\x1bÛnô\x15\x9c\x8eZö,\x80\x98\x86Û\x1eâë<ö\x90º¬\x095\x14[úE_\x09ÜO\x16\x15d©N'»KÁ¯§ºéÍ²åt[¥\x1e9á\x9d²\x95\x06Ï°ùö^\x15_ÄEDÐa\x88ªçÀâ\x04C\x16\x94,6wÏ\x12Vx\x02ÿ\x01\x00\x01\x00DÍ\x00\x05\x00\x03\x02h2\x00\x17\x00\x00\x00\x0b\x00\x02\x01\x00\x00\x10\x00\x0e\x00\x0c\x02h2\x08http/1.1\x00\x05\x00\x05\x01\x00\x00\x00\x00\x00-\x00\x02\x01\x01\x00\x12\x00\x00\x003\x04ï\x04í\x9a\x9a\x00\x01\x00\x11ì\x04À\x9f+@\x06U²A\x84Ï·ø¥ü6Ìp×QtAe¿\x091_\x96Îvðu\x13\x94K\x8eT\x1eº\x0bÄÉÊ\x9cuUH\x03¼:}B\x09\x14u\\OPÏ\x0e\x97R³P&i´\x03.\x00\x16'8\x9ah\x86¦®¹ÃV\x13Ï\x0eG¹oâ^âccq¬ËýÐ!\x0f\x86Ç\x16\x99\x18\x9fÛ,ÂÂ¢×\x15À"d¤ÝÐ\x96\x97¢ÄJ\x9b]Õ\x85\x17\x16Ã!8\x80=üº\x038éÆ\x06[\x10s\x89uÃ5\x10Ù\x9b»ÿ«\x1eÇÇ\x8a|9O½ä[fK»nÁÃÇ×n"Ù²ß¹2\x91B?\x80\x1c°ÉãÍT¡\x00\\¹½l+\x17\x9d\x91¥\x88DklQ[0m" 400 -
+200.19.224.35 - - [06/Oct/2026 13:21:05] code 400, message Bad request version ('Øû')
+200.19.224.35 - - [06/Oct/2026 13:21:05] "[31m[1m\x16\x03\x01\x07\x08\x01\x00\x07\x04\x03\x03ó\x8b\x0b¦ø]\x83¸Ý«þdÔ\x8bãäÂ\x9a¸bh9\x84 åa¿FÃ9:\x8e \x06\x8e\x1a\x85;Ø¦ø¬½À)©\x08\x1e\x0eK6ïg\x0b\x12,É?ñø\x165ô\x9e\x0d\x00 JJ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06\x9bZZ\x00\x00\x00\x0d\x00\x1a\x00\x18::\x09\x04\x09\x05\x09\x06\x04\x03\x08\x04\x04\x01\x05\x03\x08\x05\x05\x01\x08\x06\x06\x01þ\x0d\x01\x1a\x00\x00\x01\x00\x01J\x00 &N\x8fÿ2>xê-®^>:?£Iô\x13x¦\x16\x82æ\x08òR\x09Rá\x09Q\x7f\x00ð\x14\x87+ÌïÎ?àN\x04ï/}\x17d\x111<u®ÖÚ7Ý-\x1cF\x00çT6ÉåKïa#\x93ì\x95÷õ\x0eÓbu\x82ÓÈÄ\x1d&ÿ<ÙCöÔíz\x96\x1dØû[0m" 400 -
+ * Serving Flask app 'app'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.30.147:5000
+[33mPress CTRL+C to quit[0m
+ * Serving Flask app 'app'
+ * Debug mode: off
+Address already in use
+Port 5000 is in use by another program. Either identify and stop that program, or start the server with a different port.
+ * Serving Flask app 'app'
+ * Debug mode: off
+Address already in use
+Port 5000 is in use by another program. Either identify and stop that program, or start the server with a different port.
+179.87.141.231 - - [07/Oct/2026 14:42:04] "GET / HTTP/1.1" 200 -
+179.87.141.231 - - [07/Oct/2026 14:42:04] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+179.87.141.231 - - [07/Oct/2026 14:42:08] "GET / HTTP/1.1" 200 -
+ * Serving Flask app 'app'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.30.147:5000
+[33mPress CTRL+C to quit[0m
+200.19.224.35 - - [09/Oct/2026 14:08:19] code 400, message Bad request version ('\x84\x13##\x93\x840\x16Ó%ý¸£g\x02\x7f6\x87y±ê\x87´§©I¾n\x05\x99NU\x00\x90\x01ßIsF³¸½q|mâ\x96\x9f·ý*y5\x94iX\x9d\x9d\x05ì')
+200.19.224.35 - - [09/Oct/2026 14:08:19] "[31m[1m\x16\x03\x01\x06 \x01\x00\x06\x9c\x03\x03ö_$ÍN¢\x17N\\¨AÎ\x1c£I\x8fÖÖ\x9a6eq+`\x12ª#\x97M.\\\x1c K\x00á\x8c\x9bä\x1aá\x18´´Ak-5\x8aËÅtÒZ»>¨(oÃ\x99>µ28\x00 jj\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x063êê\x00\x00\x00\x05\x00\x05\x01\x00\x00\x00\x00\x00\x17\x00\x00\x00\x12\x00\x00þ\x0d\x00º\x00\x00\x01\x00\x01¤\x00 \x84\x13##\x93\x840\x16Ó%ý¸£g\x02\x7f6\x87y±ê\x87´§©I¾n\x05\x99NU\x00\x90\x01ßIsF³¸½q|mâ\x96\x9f·ý*y5\x94iX\x9d\x9d\x05ì[0m" 400 -
+200.19.224.35 - - [09/Oct/2026 14:08:19] code 400, message Bad request version ('ºUQí4#0<]\x01\x19ML\x840r\x82\x8f\x08èa\x82@cî\x106á×\x84A«¡+ãªZFkIà')
+200.19.224.35 - - [09/Oct/2026 14:08:19] "[31m[1m\x16\x03\x01\x06 \x01\x00\x06\x9c\x03\x03\\eÂRØÊ\x0f\x18¥;(ÏÐ\x14T£v¨ï}IãÔøb4 Â¶(\x96ì ×Új£÷Î\x8a»då\x8exu\x93Ý\x86dÊeC\x07' ¢\x94\x7fPÊ¿\x98b\x0b\x00 jj\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x063ZZ\x00\x00\x003\x04ï\x04íêê\x00\x01\x00\x11ì\x04ÀÇåWYa5\x1b4f%\x14\x1e ûÃëöfpÓW\x1cÑ»Ôû`\x02tAÂ\x165ö2[î\x90¢Ñ\x16f\x13\x8c%D\x06|!Ö#m¦»\x88ÛWSáÆCÜn¦\x82D\x04Ç¶Á\x83\x09ºUQí4#0<]\x01\x19ML\x840r\x82\x8f\x08èa\x82@cî\x106á×\x84A«¡+ãªZFkIà[0m" 400 -
+200.19.224.35 - - [09/Oct/2026 14:08:19] code 400, message Bad request version ('\x94&µ¨öØÏ§ºkZ\x0f7e\x12\x0f}»ÊÊÓR¡¥ª\x95\x9cÀ¦B')
+200.19.224.35 - - [09/Oct/2026 14:08:19] "[31m[1m\x16\x03\x01\x06À\x01\x00\x06¼\x03\x03\x15\x10\x96Ã¯\x90^â\x07Ré¨\x87X>ÒJi\x16."Q$!Î¦\x10'ª<0Ý Îôb[\x0f¹Þÿ\x9d\x9fI,6\x8d³7wvH3ÉÒG\x0b\x9b\x8e«fQÿ­@\x00 úú\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06S**\x00\x00\x00-\x00\x02\x01\x01\x00\x17\x00\x00\x00\x10\x00\x0e\x00\x0c\x02h2\x08http/1.1DÍ\x00\x05\x00\x03\x02h2þ\x0d\x00Ú\x00\x00\x01\x00\x01ç\x00 R4¿\x81¯\x89YÜ\x1c\x0131²\x9aî\x8b6úâ\x91\x9di7\x87Õ\x00¤\x05Àd\x1c(\x00°1ý\x84Ö\x0b\x94&µ¨öØÏ§ºkZ\x0f7e\x12\x0f}»ÊÊÓR¡¥ª\x95\x9cÀ¦B[0m" 400 -
+200.19.224.35 - - [09/Oct/2026 14:08:19] code 400, message Bad request version ('jj\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06\x93zz\x00\x00\x00')
+200.19.224.35 - - [09/Oct/2026 14:08:19] "[31m[1m\x16\x03\x01\x07\x00\x01\x00\x06ü\x03\x03è©®\x85`í\x8f\x87:\x97éÝqÌ\x8b}\x11¤@ëÅ\x12\x91·sF)sà²g* Ú¡ÇuªÈ\x8d£`¦Ø0g0ý\x12÷ õ¢^R\x13é¥8ÿÆ"Rê«\x00 jj\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06\x93zz\x00\x00\x00[0m" 400 -
+200.19.224.35 - - [09/Oct/2026 14:08:32] "GET / HTTP/1.1" 200 -
+200.19.224.35 - - [09/Oct/2026 14:08:32] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+200.19.224.35 - - [09/Oct/2026 14:08:46] "GET / HTTP/1.1" 200 -
+200.19.224.35 - - [09/Oct/2026 14:08:46] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+200.19.224.35 - - [09/Oct/2026 14:26:08] "GET / HTTP/1.1" 200 -
+ * Serving Flask app 'app'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.30.147:5000
+[33mPress CTRL+C to quit[0m
+200.19.224.35 - - [09/Oct/2026 14:36:26] "GET / HTTP/1.1" 200 -
+200.19.224.35 - - [09/Oct/2026 14:36:33] "GET / HTTP/1.1" 200 -
+ * Serving Flask app 'app'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.30.147:5000
+[33mPress CTRL+C to quit[0m
+200.19.224.35 - - [09/Oct/2026 14:38:03] "GET / HTTP/1.1" 200 -
+200.19.224.35 - - [09/Oct/2026 14:38:04] "GET / HTTP/1.1" 200 -
+200.19.224.35 - - [09/Oct/2026 14:38:18] "GET / HTTP/1.1" 200 -
+200.19.224.35 - - [09/Oct/2026 14:38:20] "GET / HTTP/1.1" 200 -
+200.19.224.35 - - [09/Oct/2026 14:38:21] "GET /sobre HTTP/1.1" 200 -
+200.19.224.35 - - [09/Oct/2026 14:38:30] "GET / HTTP/1.1" 200 -
+200.19.224.35 - - [09/Oct/2026 14:38:31] "GET /sobre HTTP/1.1" 200 -
+ * Serving Flask app 'app'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.30.147:5000
+[33mPress CTRL+C to quit[0m
+200.19.224.35 - - [09/Oct/2026 14:41:07] "GET /sobre HTTP/1.1" 200 -
+200.19.224.35 - - [09/Oct/2026 14:41:10] "GET / HTTP/1.1" 200 -
+200.19.224.35 - - [09/Oct/2026 14:41:11] "GET /curiosidades HTTP/1.1" 200 -
+200.19.224.35 - - [09/Oct/2026 14:41:12] "GET /sobre HTTP/1.1" 200 -
+200.19.224.35 - - [09/Oct/2026 14:41:13] "GET / HTTP/1.1" 200 -
+200.19.224.35 - - [09/Oct/2026 14:41:14] "GET /curiosidades HTTP/1.1" 200 -
+200.19.224.35 - - [09/Oct/2026 14:41:14] "GET /sobre HTTP/1.1" 200 -
+200.19.224.35 - - [09/Oct/2026 14:41:15] "GET / HTTP/1.1" 200 -

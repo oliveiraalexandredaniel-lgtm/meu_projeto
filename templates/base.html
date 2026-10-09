@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Explorando a Natureza{% endblock %}</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #12181b; color: #e0e6ed; line-height: 1.6; display: flex; flex-direction: column; min-height: 100vh; }
+        header { background: #1e262c; padding: 20px 0; text-align: center; border-bottom: 3px solid #2ecc71; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+        header h1 { font-size: 1.8rem; color: #2ecc71; margin-bottom: 10px; }
+        nav { display: flex; justify-content: center; gap: 20px; }
+        nav a { color: #e0e6ed; text-decoration: none; font-weight: 600; padding: 8px 16px; border-radius: 20px; transition: all 0.3s ease; }
+        nav a:hover { background: #2ecc71; color: #12181b; }
+        main { flex: 1; max-width: 900px; width: 90%; margin: 30px auto; padding: 25px; background: #1e262c; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.5); }
+        .card { background: #2a343d; padding: 20px; border-radius: 8px; margin-bottom: 20px; border-left: 4px solid #2ecc71; }
+        .card h3 { color: #2ecc71; margin-bottom: 8px; }
+        footer { background: #1e262c; text-align: center; padding: 15px; border-top: 1px solid #2a343d; font-size: 0.9rem; color: #a0aec0; }
+        footer strong { color: #2ecc71; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🌿 EcoMundo - Curiosidades da Natureza</h1>
+        <nav>
+            <a href="/">Início</a>
+            <a href="/curiosidades">Curiosidades</a>
+            <a href="/sobre">Sobre</a>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <p>Desenvolvido por: <strong>Daniel Oliveira</strong> - Atividade 3 Flask AWS EC2</p>
+    </footer>
+</body>
+</html>
