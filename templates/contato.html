@@ -1,29 +1,35 @@
 {% extends 'base.html' %}
 
-{% block title %}Contato - EcoMundo{% endblock %}
+{% block title %}Contato - Reino Animal{% endblock %}
 
 {% block content %}
-<h2>Entre em Contato 📬</h2>
-<p style="margin-bottom: 20px;">Envie sua mensagem ou sugestão de curiosidade sobre a natureza.</p>
+<h2>Envie sua Curiosidade 📬</h2>
+<p>Conhece um fato incrível sobre algum animal? Envie para nossa equipe!</p>
 
 {% if mensagem_sucesso %}
-    <div class="alert">
+    <p style="background-color: #27ae60; color: #fff; padding: 10px; border-radius: 5px;">
         {{ mensagem_sucesso }}
-    </div>
+    </p>
 {% endif %}
 
-<div class="card">
-    <form action="/contato" method="POST">
-        <label for="nome">Nome Completo:</label>
-        <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
-
-        <label for="email">E-mail:</label>
-        <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required>
-
-        <label for="mensagem">Mensagem:</label>
-        <textarea id="mensagem" name="mensagem" rows="4" placeholder="Escreva sua mensagem aqui..." required></textarea>
-
-        <button type="submit">Enviar Mensagem</button>
-    </form>
-</div>
+<form action="/contato" method="POST" style="background-color: #1e262c; padding: 20px; border-radius: 8px;">
+    <p>
+        <label for="nome"><strong>Seu Nome:</strong></label><br>
+        <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required style="width: 100%; padding: 8px; margin-top: 5px; border-radius: 4px; border: 1px solid #ccc;">
+    </p>
+    
+    <p style="margin-top: 15px;">
+        <label for="email"><strong>E-mail:</strong></label><br>
+        <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required style="width: 100%; padding: 8px; margin-top: 5px; border-radius: 4px; border: 1px solid #ccc;">
+    </p>
+    
+    <p style="margin-top: 15px;">
+        <label for="mensagem"><strong>Curiosidade ou Mensagem:</strong></label><br>
+        <textarea id="mensagem" name="mensagem" rows="4" placeholder="Escreva sobre qual animal você gostaria de ver aqui..." required style="width: 100%; padding: 8px; margin-top: 5px; border-radius: 4px; border: 1px solid #ccc;"></textarea>
+    </p>
+    
+    <p style="margin-top: 15px;">
+        <button type="submit" style="background-color: #2ecc71; color: #12181b; padding: 10px 20px; border: none; font-weight: bold; border-radius: 5px; cursor: pointer;">Enviar Curiosidade</button>
+    </p>
+</form>
 {% endblock %}

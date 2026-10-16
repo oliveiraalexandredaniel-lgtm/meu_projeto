@@ -14,12 +14,13 @@ def curiosidades():
 def contato():
     mensagem_sucesso = None
     if request.method == 'POST':
-        # Dados capturados do formulário (prontos para serem salvos no DB futuramente)
+        # Captura os dados enviados pelo formulário
         nome = request.form.get('nome')
         email = request.form.get('email')
         mensagem = request.form.get('mensagem')
         
-        mensagem_sucesso = f"Obrigado, {nome}! Sua mensagem foi recebida com sucesso."
+        # Mensagem de confirmação que será exibida na tela
+        mensagem_sucesso = f"Obrigado, {nome}! Sua mensagem foi enviada com sucesso."
         
     return render_template('contato.html', mensagem_sucesso=mensagem_sucesso)
 
