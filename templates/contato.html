@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}Contato - EcoMundo{% endblock %}
+
+{% block content %}
+<h2>Entre em Contato 📬</h2>
+<p style="margin-bottom: 20px;">Envie sua mensagem ou sugestão de curiosidade sobre a natureza.</p>
+
+{% if mensagem_sucesso %}
+    <div class="alert">
+        {{ mensagem_sucesso }}
+    </div>
+{% endif %}
+
+<div class="card">
+    <form action="/contato" method="POST">
+        <label for="nome">Nome Completo:</label>
+        <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required>
+
+        <label for="mensagem">Mensagem:</label>
+        <textarea id="mensagem" name="mensagem" rows="4" placeholder="Escreva sua mensagem aqui..." required></textarea>
+
+        <button type="submit">Enviar Mensagem</button>
+    </form>
+</div>
+{% endblock %}
