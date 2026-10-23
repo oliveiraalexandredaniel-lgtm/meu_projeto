@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block title %}Cadastro de Curiosidades - Reino Animal{% endblock %}
+
+{% block content %}
+<h2>Cadastrar Nova Curiosidade 📝</h2>
+<p>Preencha os campos abaixo para enviar um novo registro para o banco de dados do portal.</p>
+
+{% if mensagem_sucesso %}
+    <p style="background-color: #27ae60; color: #fff; padding: 12px; border-radius: 6px; font-weight: bold;">
+        {{ mensagem_sucesso }}
+    </p>
+{% endif %}
+
+<form action="/contato" method="POST" style="background-color: #1e262c; padding: 25px; border-radius: 8px; border-left: 4px solid #2ecc71;">
+    <p>
+        <label for="autor"><strong>Nome do Autor (VARCHAR):</strong></label><br>
+        <input type="text" id="autor" name="autor" placeholder="Seu nome completo" required style="width: 100%; padding: 10px; margin-top: 5px; border-radius: 4px; border: 1px solid #3a4651; background-color: #12181b; color: #fff;">
+    </p>
+    
+    <p style="margin-top: 15px;">
+        <label for="email"><strong>E-mail (VARCHAR):</strong></label><br>
+        <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required style="width: 100%; padding: 10px; margin-top: 5px; border-radius: 4px; border: 1px solid #3a4651; background-color: #12181b; color: #fff;">
+    </p>
+
+    <p style="margin-top: 15px;">
+        <label for="categoria"><strong>Categoria do Animal (VARCHAR):</strong></label><br>
+        <select id="categoria" name="categoria" required style="width: 100%; padding: 10px; margin-top: 5px; border-radius: 4px; border: 1px solid #3a4651; background-color: #12181b; color: #fff;">
+            <option value="">Selecione uma categoria...</option>
+            <option value="Mamíferos">Mamíferos</option>
+            <option value="Aves">Aves</option>
+            <option value="Répteis">Répteis</option>
+            <option value="Vida Marinha">Vida Marinha</option>
+            <option value="Insetos">Insetos</option>
+        </select>
+    </p>
+
+    <p style="margin-top: 15px;">
+        <label for="titulo"><strong>Título da Curiosidade (VARCHAR):</strong></label><br>
+        <input type="text" id="titulo" name="titulo" placeholder="Ex: Por que os flamingos são rosas?" required style="width: 100%; padding: 10px; margin-top: 5px; border-radius: 4px; border: 1px solid #3a4651; background-color: #12181b; color: #fff;">
+    </p>
+
+    <p style="margin-top: 15px;">
+        <label for="descricao"><strong>Descrição Detalhada (TEXT):</strong></label><br>
+        <textarea id="descricao" name="descricao" rows="4" placeholder="Escreva aqui os detalhes da curiosidade sobre o animal..." required style="width: 100%; padding: 10px; margin-top: 5px; border-radius: 4px; border: 1px solid #3a4651; background-color: #12181b; color: #fff;"></textarea>
+    </p>
+
+    <p style="margin-top: 20px;">
+        <button type="submit" style="background-color: #2ecc71; color: #12181b; padding: 12px 24px; border: none; font-weight: bold; border-radius: 5px; cursor: pointer; font-size: 1rem;">Salvar e Enviar Registro</button>
+    </p>
+</form>
+{% endblock %}
