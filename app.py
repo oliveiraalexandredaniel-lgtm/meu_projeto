@@ -25,7 +25,7 @@ def index():
 
 @app.route('/curiosidades')
 def curiosidades():
-    # Procura todos os registos da tabela mensagens_contato
+    # Procura todos os registros da tabela mensagens_contato
     try:
         conn = get_db_connection()
         with conn.cursor() as cursor:
@@ -34,7 +34,7 @@ def curiosidades():
         conn.close()
     except Exception as e:
         lista_curiosidades = []
-        print(f"Erro ao procurar registos: {e}")
+        print(f"Erro ao procurar registros: {e}")
         
     return render_template('curiosidades.html', curiosidades=lista_curiosidades)
 
@@ -57,12 +57,15 @@ def contato():
                     VALUES (%s, %s, %s, %s, %s)
                 """
                 cursor.execute(sql, (autor, email, categoria, titulo, descricao))
+            
+            conn.commit()  # Garante a persistência imediata dos dados
             conn.close()
-            print("Registo guardado com sucesso no MySQL!")
+            
+            print("Registro salvo com sucesso no MySQL!")
             return redirect(url_for('curiosidades'))
         except Exception as e:
-            print(f"Erro ao guardar no banco de dados: {e}")
-            return f"Erro ao guardar no banco de dados: {e}", 500
+            print(f"Erro ao salvar no banco de dados: {e}")
+            return f"Erro ao salvar no banco de dados: {e}", 500
 
     return render_template('contato.html')
 
