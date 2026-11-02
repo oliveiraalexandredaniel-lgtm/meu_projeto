@@ -25,11 +25,11 @@ def index():
 
 @app.route('/curiosidades')
 def curiosidades():
-    # Procura todos os registros da tabela mensagens_contato
+    # Busca todos os registros da tabela mensagems_contato (com M)
     try:
         conn = get_db_connection()
         with conn.cursor() as cursor:
-            cursor.execute("SELECT * FROM mensagens_contato ORDER BY id DESC")
+            cursor.execute("SELECT * FROM mensagems_contato ORDER BY id DESC")
             lista_curiosidades = cursor.fetchall()
         conn.close()
     except Exception as e:
@@ -51,14 +51,14 @@ def contato():
         try:
             conn = get_db_connection()
             with conn.cursor() as cursor:
-                # Grava diretamente na tabela mensagens_contato existente
+                # Nome exato da tabela no seu MySQL: mensagems_contato (com M)
                 sql = """
-                    INSERT INTO mensagens_contato (nome, email, categoria, titulo, mensagem)
+                    INSERT INTO mensagems_contato (nome, email, categoria, titulo, mensagem)
                     VALUES (%s, %s, %s, %s, %s)
                 """
                 cursor.execute(sql, (autor, email, categoria, titulo, descricao))
             
-            conn.commit()  # Garante a persistência imediata dos dados
+            conn.commit()
             conn.close()
             
             print("Registro salvo com sucesso no MySQL!")
