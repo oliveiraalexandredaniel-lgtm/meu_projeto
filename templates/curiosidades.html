@@ -3,21 +3,26 @@
 {% block title %}Curiosidades - Reino Animal{% endblock %}
 
 {% block content %}
-<h2>Fatos Impressionantes do Reino Animal 🐾</h2>
-<p>Confira algumas das maiores maravilhas da fauna do nosso planeta:</p>
+<h2>Fatos e Curiosidades do Reino Animal 🐾</h2>
+<p>Confira os registros cadastrados no banco de dados do portal:</p>
 
-<div style="background-color: #1e262c; padding: 15px; border-radius: 8px; margin-bottom: 15px; border-left: 4px solid #2ecc71;">
-    <h3>🐙 Polvos têm três corações</h3>
-    <p>Dois corações bombear sangue para as guelras, enquanto o terceiro bombeia o sangue oxigenado para o restante do corpo do polvo.</p>
-</div>
-
-<div style="background-color: #1e262c; padding: 15px; border-radius: 8px; margin-bottom: 15px; border-left: 4px solid #2ecc71;">
-    <h3>🐬 Golfinhos chamam uns aos outros por "nomes"</h3>
-    <p>Os golfinhos usam assobios individuais únicos para identificar e chamar amigos ou membros de seu grupo específico.</p>
-</div>
-
-<div style="background-color: #1e262c; padding: 15px; border-radius: 8px; margin-bottom: 15px; border-left: 4px solid #2ecc71;">
-    <h3>🦩 Flamingos nascem cinzas</h3>
-    <p>Sua famosa cor rosa vem exclusivamente da dieta rica em betacaroteno, presente nos camarões e algas que eles consomem.</p>
-</div>
+{% if curiosidades %}
+    {% for item in curiosidades %}
+    <div style="background-color: #1e262c; padding: 15px; border-radius: 8px; margin-bottom: 15px; border-left: 4px solid #2ecc71;">
+        <h3 style="margin-top: 0; color: #2ecc71;">
+            {{ item.titulo or 'Sem título' }} 
+            {% if item.categoria %}
+                <span style="font-size: 0.8rem; background: #3a4651; color: #fff; padding: 2px 8px; border-radius: 4px; float: right;">{{ item.categoria }}</span>
+            {% endif %}
+        </h3>
+        <p><strong>Autor:</strong> {{ item.nome }} ({{ item.email }})</p>
+        <p>{{ item.mensagem }}</p>
+        <small style="color: #888;">Enviado em: {{ item.data_envio }}</small>
+    </div>
+    {% endfor %}
+{% else %}
+    <div style="background-color: #1e262c; padding: 15px; border-radius: 8px; border-left: 4px solid #e74c3c;">
+        <p style="margin: 0;">Nenhuma curiosidade cadastrada até o momento.</p>
+    </div>
+{% endif %}
 {% endblock %}
